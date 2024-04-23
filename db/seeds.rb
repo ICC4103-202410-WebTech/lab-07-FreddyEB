@@ -57,6 +57,9 @@ post1 = Post.create(
     likes_count: 55,
 )
 post1.tags << tag2
+post1.tags << tag3
+post1.tags << tag5
+
 post2 = Post.create(
     title: 'Title 2',
     content: "Why so serious?",
@@ -65,6 +68,10 @@ post2 = Post.create(
     answers_count: 111,
     likes_count: 300, 
 )
+post2.tags << tag1
+post2.tags << tag2
+post2.tags << tag3
+
 post3 = Post.create(
     title: 'Title 3',
     content: "Luke, I am your father",
@@ -73,6 +80,9 @@ post3 = Post.create(
     answers_count: 66,
     likes_count: 501,
 )
+post3.tags << tag5
+post3.tags << tag4
+
 post4 = Post.create(
     title: 'Title 4',
     content: "Well, Superman, here we are, the two last men on Earth. One of us must die.",
@@ -81,6 +91,9 @@ post4 = Post.create(
     answers_count: 190,
     likes_count: 100,
 )
+post4.tags << tag1
+
+
 post5 = Post.create(
     title: 'Title 5',
     content: "Even the most monstrous of beings deserves a little compassion",
@@ -89,6 +102,9 @@ post5 = Post.create(
     answers_count: 20,
     likes_count: 30,
 )
+post5.tags << tag2
+post5.tags << tag5
+
 post6 = Post.create(
     title: 'Title 6',
     content: "Everybody's a nobody, till somebody loves you",
@@ -97,6 +113,8 @@ post6 = Post.create(
     answers_count: 90,
     likes_count: 200,
 )
+post6.tags << tag1
+
 post7 = Post.create(
     title: 'Title 7',
     content: "I ask for so little. Just fear me, love me, do as I say and I will be your slave",
@@ -105,6 +123,9 @@ post7 = Post.create(
     answers_count: 46,
     likes_count: 125,
 )
+post7.tags << tag4
+post7.tags << tag3
+
 post8 = Post.create(
     title: 'Title 8',
     content: "Silence, you fools!",
@@ -113,6 +134,8 @@ post8 = Post.create(
     answers_count: 40,
     likes_count: 100,
 )
+post8.tags << tag5
+
 post9 = Post.create(
     title: 'Title 9',
     content: "Revenge is a dish best served cold",
@@ -121,6 +144,10 @@ post9 = Post.create(
     answers_count: 20,
     likes_count: 70,
 )
+post9.tags << tag2
+post9.tags << tag3
+post9.tags << tag1
+
 post10 = Post.create(
     title: 'Title 10',
     content: "I am inevitable",
@@ -129,6 +156,8 @@ post10 = Post.create(
     answers_count: 33,
     likes_count: 50,
 )
+post10.tags << tag1
+post10.tags << tag5
 
 child_post1 = post10.child_posts.create(title: 'Title 9',
 content: "Revenge is a dish best served cold",

@@ -1,9 +1,9 @@
 class User < ApplicationRecord
     has_many :posts, dependent: :destroy
     
-    validates :name, presence: true
-    validates :email, presence: true, uniqueness: true, format: { with: URI::MailTo::EMAIL_REGEXP }
-    validates :password, presence: true, length: { minimum: 6 }
+    validates :name, presence: { message: "You have to fill in your username!" }
+    validates :email, presence: { message: "You have to fill in your email!" }, uniqueness: { message: "This email is already in use" }, format: { with: URI::MailTo::EMAIL_REGEXP, message: "Invalid email format" }
+    validates :password, presence: { message: "You have to fill in your password!" }, length: { minimum: 6, message: "Password must be at least 6 characters long" }
 
     before_validation :downcase_email
     private
